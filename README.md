@@ -1,0 +1,2 @@
+# SonNetAi
+its not skynet
