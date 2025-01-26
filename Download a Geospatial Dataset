@@ -1,0 +1,164 @@
+1. **Initialize a Git Repository:**
+   If you haven't already, navigate to your project directory and initialize a Git repository.
+
+   ```sh
+   cd C:\Users\AdamH\sonnetai
+   git init
+   ```
+
+2. **Create a .gitignore File:**
+   Create a `.gitignore` file to exclude files and directories that you don't want to track. Here's an example `.gitignore` file for a Python project:
+
+   ```plaintext
+   # Byte-compiled / optimized / DLL files
+   __pycache__/
+   *.py[cod]
+   *$py.class
+
+   # C extensions
+   *.so
+
+   # Distribution / packaging
+   .Python
+   build/
+   develop-eggs/
+   dist/
+   downloads/
+   eggs/
+   .eggs/
+   lib/
+   lib64/
+   parts/
+   sdist/
+   var/
+   wheels/
+   share/python-wheels/
+   *.egg-info/
+   .installed.cfg
+   *.egg
+
+   # Virtual environments
+   venv/
+   .venv/
+
+   # Jupyter Notebook
+   .ipynb_checkpoints
+
+   # pyenv
+   .python-version
+
+   # mypy
+   .mypy_cache/
+   .dmypy.json
+   dmypy.json
+
+   # Pyre type checker
+   .pyre/
+   ```
+
+3. **Add Files to the Repository:**
+   Add your project files to the Git repository. Make sure the `main.py` and any other essential scripts are included.
+
+   ```sh
+   git add .
+   ```
+
+4. **Commit the Changes:**
+   Commit the changes with a meaningful commit message.
+
+   ```sh
+   git commit -m "Initial commit with project files"
+   ```
+
+5. **Create a Repository on GitHub:**
+   Go to GitHub and create a new repository.
+
+6. **Add GitHub Repository as Remote:**
+   Add the GitHub repository as a remote origin to your local repository.
+
+   ```sh
+   git remote add origin https://github.com/yourusername/yourrepository.git
+   ```
+
+7. **Push Changes to GitHub:**
+   Push the committed changes to the GitHub repository.
+
+   ```sh
+   git push -u origin master
+   ```
+
+### Example Project Structure
+
+Here's an example of what your project structure might look like:
+
+```
+sonnetai/
+├── .gitignore
+├── main.py
+├── verify_ee.py
+├── venv/
+│   ├── ...
+└── README.md
+```
+
+### Example `README.md`
+
+It's also a good practice to include a `README.md` file that explains the purpose of your project and provides instructions on how to set it up and run it. Here's a simple example:
+
+```markdown
+# SonnetAI Project
+
+This project uses Google Earth Engine and Folium to create a map visualization of building confidence levels.
+
+## Setup
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/yourusername/sonnetai.git
+   cd sonnetai
+   ```
+
+2. Create and activate a virtual environment:
+
+   ```sh
+   python -m venv venv
+   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+   ```
+
+3. Install the required packages:
+
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+4. Authenticate with Google Earth Engine:
+
+   ```sh
+   earthengine authenticate --force
+   ```
+
+## Running the Project
+
+1. Verify Earth Engine initialization:
+
+   ```sh
+   python verify_ee.py
+   ```
+
+2. Run the main script to generate the map:
+
+   ```sh
+   python main.py
+   ```
+
+3. Open `index.html` in your web browser to view the map.
+
+## License
+
+This project is licensed under the MIT License.
+```
+
+### Final Steps
+
+After setting up your project on GitHub, you can continue to commit and push changes as you develop. This keeps your project versioned and makes it easier to collaborate with others.
